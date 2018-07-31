@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Home</title>
+      <link rel="stylesheet" href="style3.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+      <div class="wrapper">
+            <header>
+
+                  <nav>
+
+                        <div class="menu-icon">
+                              <i class="fa fa-bars fa-2x"></i>
+                        </div>
+
+                        <div class="logo">
+                              <h1>PUGS (logo)</h1>
+
+                        </div>
+
+                        <div class="menu">
+                              <ul>
+
+                                <nav class="stroke">
+                                    <ul>
+                                        <li><a href="home.html">Home</a></li>
+                                        <li><a href="aboutus.html">About Us</a></li>
+                                        <li><a href="events.html">Events</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="index.html">Login</a></li>
+                                      </ul>
+                                    </nav>
+                              </ul>
+                        </div>
+                  </nav>
+
+
+            </header>
+            <!-- Return to Top -->
+            <a href="javascript:" id="return-to-top"><i class="fa">&#xf062;</i></a>
+
+
+            <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+            <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+            <img id = "event1"src ="logo.jpg">
+
+            <div class="content">
+                  <p>
+                        I was in my 8th grade math class. All year a particular student, known for being a little wacky, had been occasionally pretending to be Pikachu. Some days he would sit there working on stuff and someone would ask him a question or whater and he'd just respond 'Pika? Piiiika CHUU' or any other combination. Well, one day late in the year we are working on our assignment after recieving the lecture and said kid starts making some weird noises. Starts to shake a little bit. At first I thought maybe he was starting to seize, but just as it starts to get frighteningly violent he stops still as a rock and practically shouts "RAICHU!!!' After a couple seconds of stunned silence, our teacher simply shakes his head and says, 'Derrick, principles office, now.'
+                  </p>
+  </div>
+  <img id ="event2" src="hawaiilogo.png">
+
+  <div class="content1">
+        <p>
+              I was in my 8th grade math class. All year a particular student, known for being a little wacky, had been occasionally pretending to be Pikachu. Some days he would sit there working on stuff and someone would ask him a question or whater and he'd just respond 'Pika? Piiiika CHUU' or any other combination. Well, one day late in the year we are working on our assignment after recieving the lecture and said kid starts making some weird noises. Starts to shake a little bit. At first I thought maybe he was starting to seize, but just as it starts to get frighteningly violent he stops still as a rock and practically shouts "RAICHU!!!' After a couple seconds of stunned silence, our teacher simply shakes his head and says, 'Derrick, principles office, now.'
+        </p>
+</div>
+
+            </div>
+
+
+            <script type="text/javascript">
+
+            // Menu-toggle button
+
+            $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+            });
+
+            // Scrolling Effect
+
+            $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+            })
+
+            // ===== Scroll to Top ====
+            $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {        // If page is scrolled more than 50px
+              $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+              $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+              scrollTop : 0                       // Scroll to top of body
+            }, 500);
+            });
+
+            </script>
+
+            </body>
+            </html>

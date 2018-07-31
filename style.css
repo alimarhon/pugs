@@ -1,0 +1,237 @@
+body {
+  font-family:sans-serif;
+  margin:0;
+  padding:0;
+  background-size: cover;
+  background-position:center;
+  filter:opacity(80%);
+}
+
+h1:hover {
+  color: darkgrey;
+  z-index: 1;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+.loginbox {
+  width:320px;
+  height:430px;
+  background: #000;
+  color:#fff;
+  top:50%;
+  left:50%;
+  position:absolute;
+  transform: translate(-50%,-50%);
+  box-sizing:border-box;
+  border-radius: 5%;
+  padding: 70px 70px;
+}
+
+.avatar {
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  position:absolute;
+  top:-50px;
+  left: calc(50%,-50px);
+  padding: 0px 40px;
+}
+
+h1 {
+  margin:0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+
+}
+
+.loginbox p{
+  margin:0;
+  padding:0;
+  font-weight:bold;
+
+}
+
+.loginbox input{
+  width:100%;
+  margin-bottom:20px;
+}
+
+.loginbox  input[type="password"], input[type="text"]
+ {
+  border:none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color:#fff;
+  font-size:16px;
+}
+
+.loginbox input[type="submit"] {
+  border:none;
+  outline:none;
+  height:48px;
+  background:#fb2525;
+  color:#fff;
+  font-size:18px;
+  border-radius:24px;
+
+}
+
+.loginbox input[type="submit"]:before
+.loginbox input[type="submit"]:after
+{
+  position:absolute;
+}
+.loginbox input[type="submit"]:hover
+{
+  cursor:pointer;
+  background:#ffc107;
+  color:#000;
+}
+
+
+
+.loginbox a{
+
+  text-decoration:none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+  text-align: center;
+}
+
+.loginbox a:hover{
+  position:absolute;
+  color:#ffc107;
+  -webkit-animation: moving 2s infinite;
+   animation: moving 2s infinite;
+}
+@keyframes moving {
+  50% {
+    color: #001F3F;
+  }
+  100% {
+    color: #FF4136;
+  }
+}
+
+.portfolio-experiment, .scene {
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 450px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-experiment a {
+  color: white;
+  padding: 0.7em calc(0.7em * 1);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 1.5em;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+}
+.portfolio-experiment a .text {
+  font-family: proxima-nova, monospace;
+  transform: translate3d(0, 0.2em, 0);
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0, 0.5) 0.4s;
+}
+.portfolio-experiment a:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: calc(0.2em * 1);
+  right: calc(0.2em * 1);
+  height: 3px;
+  background: #f26522;
+  transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+  transform-origin: left;
+}
+.portfolio-experiment .line {
+  position: absolute;
+  background: #f26522;
+}
+.portfolio-experiment .line.-right, .portfolio-experiment .line.-left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  transform: scale3d(1, 0, 1);
+}
+.portfolio-experiment .line.-top, .portfolio-experiment .line.-bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  transform: scale3d(0, 1, 1);
+}
+.portfolio-experiment .line.-right {
+  right: -3px;
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+  transform-origin: top;
+}
+.portfolio-experiment .line.-top {
+  top: -3px;
+  transition: transform 0.08s linear 0.43s;
+  transform-origin: right;
+}
+.portfolio-experiment .line.-left {
+  left: -3px;
+  transition: transform 0.08s linear 0.51s;
+  transform-origin: bottom;
+}
+.portfolio-experiment .line.-bottom {
+  bottom: -3px;
+  transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+  transform-origin: right;
+
+}
+.portfolio-experiment a:hover .text,
+.portfolio-experiment a:active .text {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+}
+.portfolio-experiment a:hover:after,
+.portfolio-experiment a:active:after {
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  transform-origin: right;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+}
+.portfolio-experiment a:hover .line,
+.portfolio-experiment a:active .line {
+  transform: scale3d(1, 1, 1);
+}
+.portfolio-experiment a:hover .line.-right,
+.portfolio-experiment a:active .line.-right {
+  transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+  transform-origin: bottom;
+}
+.portfolio-experiment a:hover .line.-top,
+.portfolio-experiment a:active .line.-top {
+  transition: transform 0.08s linear 0.4s;
+  transform-origin: right;
+}
+.portfolio-experiment a:hover .line.-left,
+.portfolio-experiment a:active .line.-left {
+  transition: transform 0.08s linear 0.48s;
+  transform-origin: top;
+}
+.portfolio-experiment a:hover .line.-bottom,
+.portfolio-experiment a:active .line.-bottom {
+  transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+  transform-origin: left;
+}
